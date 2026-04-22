@@ -8,16 +8,9 @@ function Footer() {
         <p>Úniko Tafí · Cafetería de especialidad</p>
       </div>
       <div className="footer-content footer-carta__right">
-        <p>
-          Powered by{" "}
-          <a
-            href="#"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Groovit
-          </a>
-        </p>
+      <p>
+  Powered by <span className="footer-link-style">Groovit</span>
+</p>
       </div>
     </footer>
   );

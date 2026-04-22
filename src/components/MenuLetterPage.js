@@ -160,7 +160,7 @@ function MenuLetterPage({ pageIndex, sheetHeading, blocks }) {
       className="menu-letter-page"
       aria-label={`Hoja ${pageNum} de ${CARTA_TOTAL_PAGES}`}
     >
-      <div className="menu-letter-sheet">
+      <div className={`menu-letter-sheet menu-letter-sheet--page-${pageNum}`}>
         <div className="menu-letter-brand">
           <img
             src={unikoLogo}
