@@ -1,7 +1,7 @@
 import React from "react";
 import "../styles/whatsapp-float.css";
 
-const WHATSAPP_NUMBER = "5493863510790";
+const WHATSAPP_NUMBER = "5493813692444";
 const WHATSAPP_TEXT = "¡Hola! Quiero hacer mi pedido...";
 
 function WhatsAppFloat() {
