@@ -51,7 +51,7 @@
 
 .menu-letter-sheet--page-2::after {
   background-image: url("../watermarks/page-2-desayuno.svg");
-  background-position: left 1rem bottom 1.15rem;
+  background-position: right 1.1rem bottom 1.15rem;
 }
 
 .menu-letter-sheet--page-3::after {
@@ -163,9 +163,12 @@
 
 /* Títulos tipo Ristretto (Cormorant), alineados a la izquierda */
 .menu-ristretto-block {
+  --menu-accent: #b08d6a;
+  --menu-accent-soft: rgba(176, 141, 106, 0.22);
+  --menu-title: #3f3328;
   margin: 1rem 0 0.5rem;
   padding-top: 0.85rem;
-  border-top: 1px solid rgba(74, 61, 50, 0.14);
+  border-top: 1px solid var(--menu-accent-soft);
   text-align: left;
 }
 
@@ -175,7 +178,7 @@
   font-weight: 600;
   letter-spacing: 0.06em;
   line-height: 1.2;
-  color: #3a3028;
+  color: var(--menu-title);
   margin: 0;
 }
 
@@ -191,6 +194,9 @@
 
 /* Título con líneas (hoja + secciones) */
 .menu-heading {
+  --menu-accent: #b08d6a;
+  --menu-accent-soft: rgba(176, 141, 106, 0.22);
+  --menu-title: #2f2720;
   text-align: center;
   color: #1a1a1a;
 }
@@ -204,7 +210,7 @@
   margin-top: 1rem;
   margin-bottom: 0.85rem;
   padding-top: 0.85rem;
-  border-top: 1px solid rgba(176, 141, 106, 0.4);
+  border-top: 1px solid var(--menu-accent);
 }
 
 .menu-feature + .menu-ristretto-block {
@@ -232,7 +238,43 @@
   min-width: 0.75rem;
   max-width: 5rem;
   height: 1px;
-  background-color: #b08d6a;
+  background-color: var(--menu-accent);
+}
+
+.menu-tone--coffee {
+  --menu-accent: #9a7658;
+  --menu-accent-soft: rgba(154, 118, 88, 0.2);
+  --menu-title: #6e4b31;
+}
+
+.menu-tone--breakfast {
+  --menu-accent: #b98f63;
+  --menu-accent-soft: rgba(185, 143, 99, 0.2);
+  --menu-title: #8a6740;
+}
+
+.menu-tone--sandwich {
+  --menu-accent: #927b66;
+  --menu-accent-soft: rgba(146, 123, 102, 0.2);
+  --menu-title: #6f5b49;
+}
+
+.menu-tone--drinks {
+  --menu-accent: #6f8f92;
+  --menu-accent-soft: rgba(111, 143, 146, 0.2);
+  --menu-title: #4f7176;
+}
+
+.menu-tone--tea {
+  --menu-accent: #7a9273;
+  --menu-accent-soft: rgba(122, 146, 115, 0.2);
+  --menu-title: #5b7056;
+}
+
+.menu-tone--bakery {
+  --menu-accent: #b08272;
+  --menu-accent-soft: rgba(176, 130, 114, 0.2);
+  --menu-title: #8b5f52;
 }
 
 .menu-heading__title {
@@ -243,7 +285,7 @@
   font-size: 0.78rem;
   letter-spacing: 0.06em;
   line-height: 1.25;
-  color: #1a1a1a;
+  color: var(--menu-title);
   text-align: center;
   max-width: 88%;
 }
@@ -270,7 +312,7 @@
   font-size: 0.82rem;
   font-weight: 600;
   letter-spacing: 0.06em;
-  color: #1a1a1a;
+  color: var(--menu-title);
 }
 
 .menu-heading__subtitle {

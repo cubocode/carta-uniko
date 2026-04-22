@@ -6,6 +6,7 @@ import Slide4 from "./Slide4";
 import Slide5 from "./Slide5";
 import Slide6 from "./Slide6";
 import Footer from "./Footer";
+import WhatsAppFloat from "./WhatsAppFloat";
 
 function Home() {
   return (
@@ -17,6 +18,7 @@ function Home() {
       <Slide5 />
       <Slide6 />
       <Footer />
+      <WhatsAppFloat />
     </main>
   );
 }

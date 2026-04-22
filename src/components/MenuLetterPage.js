@@ -3,9 +3,37 @@ import "../styles/menu-letter.css";
 import { CARTA_TOTAL_PAGES } from "../data/cartaUnikoPages";
 import unikoLogo from "../imagenes/uniko_vector.png";
 
+function getHeadingTheme(title = "") {
+  const t = title.toLowerCase();
+  if (t.includes("cafeter") || t.includes("expresso") || t.includes("leche")) {
+    return { tone: "coffee" };
+  }
+  if (
+    t.includes("desayuno") ||
+    t.includes("merienda") ||
+    t.includes("combos")
+  ) {
+    return { tone: "breakfast" };
+  }
+  if (t.includes("sandwich") || t.includes("focaccia") || t.includes("ciabatta")) {
+    return { tone: "sandwich" };
+  }
+  if (t.includes("bebida") || t.includes("limonada") || t.includes("alcohol")) {
+    return { tone: "drinks" };
+  }
+  if (t.includes("té") || t.includes("te")) {
+    return { tone: "tea" };
+  }
+  if (t.includes("pasteler") || t.includes("tortas") || t.includes("alfajores")) {
+    return { tone: "bakery" };
+  }
+  return { tone: "classic" };
+}
+
 function RistrettoHeading({ title, subtitle, as: Tag = "h3" }) {
+  const { tone } = getHeadingTheme(title);
   return (
-    <div className="menu-ristretto-block">
+    <div className={`menu-ristretto-block menu-tone--${tone}`}>
       <Tag className="menu-ristretto-block__title">{title}</Tag>
       {subtitle ? (
         <p className="menu-ristretto-block__subtitle">{subtitle}</p>
@@ -21,9 +49,11 @@ function HeadingWithLines({
   as: Tag = "h2",
   embedded = false,
 }) {
+  const { tone } = getHeadingTheme(title);
   const rootClass = [
     "menu-heading",
     "menu-heading--sheet",
+    `menu-tone--${tone}`,
     embedded ? "menu-heading--embedded" : "",
   ]
     .filter(Boolean)
